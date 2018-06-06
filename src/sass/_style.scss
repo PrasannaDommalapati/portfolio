@@ -1,7 +1,10 @@
-@import "~bootstrap/scss/bootstrap";
-
 .kcHeader {
-    padding-bottom: 65px;
+    background-color: #343a40;
+    position:         fixed;
+    right:            0;
+    left:             0;
+    padding:          0.5rem 1rem;
+
     .logo img {
         height:        50px;
         width:         50px;
@@ -11,33 +14,40 @@
     .title, .menu {
         color: #ffffff;
     }
-    .title {
+    .logo .title {
         font-family:    Jazz LET, fantasy;
-        font-size:     33px;
+        font-size:      33px;
         text-transform: capitalize;
+        margin-left:    65px;
+        margin-top:     -50px;
 
     }
     .menu {
-        text-transform: uppercase;
-        background: green;
-        float:right !important;
-        display:inline !important;
-        a {
-            font-family: Courier New, monospace;
-            font-size: 14px;
-            padding-right: 15px;
-            letter-spacing: 1px;font-weight: 100;
-
+        text-transform:  uppercase;
+        float:           right;
+        font-family:     Courier New, monospace;
+        font-size:       14px;
+        letter-spacing:  1px;
+        font-weight:     100;
+        list-style-type: none;
+        margin-top: -35px;
+        li {
+            display:         inline;
         }
+
+        li:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
     }
 }
 
 .kcContainer {
-    background: #7fb2bb;
-    margin:     1px;
+    background:  #7fb2bb;
+    padding-top: 50px;
     .about, .education, .profile, .skills, .experience {
         text-transform: uppercase;
-        background: #ffffff;
     }
 
 }
