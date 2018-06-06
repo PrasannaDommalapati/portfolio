@@ -1,10 +1,56 @@
-$background: #ffffff;
-$font-colour: #070707;
-$blue: #a5c1e6;
-$priamry: green;
+@import "~bootstrap/scss/bootstrap";
 
-.test {
+.kcHeader {
+    padding-bottom: 65px;
+    .logo img {
+        height:        50px;
+        width:         50px;
+        border-radius: 25px;
+        margin-right:  20px;
+    }
+    .title, .menu {
+        color: #ffffff;
+    }
+    .title {
+        font-family:    Jazz LET, fantasy;
+        font-size:     33px;
+        text-transform: capitalize;
+
+    }
+    .menu {
+        text-transform: uppercase;
+        background: green;
+        float:right !important;
+        display:inline !important;
+        a {
+            font-family: Courier New, monospace;
+            font-size: 14px;
+            padding-right: 15px;
+            letter-spacing: 1px;font-weight: 100;
+
+        }
+    }
+}
+
+.kcContainer {
+    background: #7fb2bb;
+    margin:     1px;
+    .about, .education, .profile, .skills, .experience {
+        text-transform: uppercase;
+        background: #ffffff;
+    }
+
+}
+
+.kcFooter {
     background:  maroon;
-    color:       #ffffff;
-    font-family: "Courier New";
+    position:    fixed;
+    bottom:      0;
+    width:       100%;
+    height:      60px;
+    line-height: 60px;
+    .container p {
+        color:      white;
+        text-align: center;
+    }
 }

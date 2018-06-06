@@ -1,3 +1,8 @@
+import 'bootstrap';
 import style from './sass/_style.scss';
 
-alert('fouvhaiodfh gsviuagsdfviug gdfsv igsdv');
+(() => {
+
+    console.log('This is the portfolio of Prasanna KC Dommalapati')
+
+})();
