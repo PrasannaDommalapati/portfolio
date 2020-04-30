@@ -6,6 +6,7 @@
     "scripts": {
         "watch": "webpack",
         "serve": "webpack-dev-server --https --watch --open --port 5000",
+        "start": "webpack-dev-server --open",
         "build": "webpack --mode production --config webpack.config.js"
     },
     "keywords": [
