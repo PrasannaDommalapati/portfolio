@@ -1,4 +1,4 @@
-// import 'bootstrap';
+import 'bootstrap';
 import style from './sass/_style.scss';
 
 (() => {

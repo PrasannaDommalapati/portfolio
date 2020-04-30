@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "watch": "webpack",
-        "serve": "webpack-dev-server --watch --open --port 3000",
+        "serve": "webpack-dev-server --https --watch --open --port 5000",
         "build": "webpack --mode production --config webpack.config.js"
     },
     "keywords": [
@@ -30,8 +30,8 @@
         "raw-loader": "^0.5.1",
         "sass-loader": "^7.0.2",
         "style-loader": "^0.21.0",
-        "webpack": "^4.11.0",
-        "webpack-cli": "^3.0.2",
-        "webpack-dev-server": "^3.1.4"
+        "webpack": "^4.43.0",
+        "webpack-cli": "^3.3.11",
+        "webpack-dev-server": "^3.10.3"
     }
 }

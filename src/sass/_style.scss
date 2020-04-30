@@ -1,131 +1,161 @@
+@import url("https://fonts.googleapis.com/css?family=Dosis:400,700");
+
+:root {
+  --main-white-color: #f2f2f2;
+  --main-black-color: black;
+  --main-purple-color: #9e89b8;
+  --main-background-color: #fe80a8;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+button {
+  background: none;
+  outline: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 body {
-    background: #eaeaea;
+  font: 16px/1.5 "Dosis", sans-serif;
+  /*IE FIX*/
+  /*display: flex;
+  flex-direction: column;*/
 }
 
-.kcHeader {
-    background-color: #343a40;
-    position:         fixed;
-    right:            0;
-    left:             0;
-    top:              0;
-    height:           100px;
-    .logo {
-        height:        85px;
-        width:         75px;
-        border-radius: 40px;
-        margin:        5px 20px 0 5px;
-    }
-    .title {
-        display: none;
-    }
-    .menu {
-        .mobileMenu i {
-            position:   relative;
-            float:      right;
-            right:      1em;
-            margin-top: -69px;
-            color:      #ffffff;
-            font-size:  3em;
-        }
-
-        li {
-            display: none;
-        }
-
-    }
+/* CONTAINER
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-.kcContainer {
-
-    margin: 6.4em 1em 4em 1em;
-    .about, .education, .profile, .skills, .experience, .contact {
-        h2 {
-            color:                 #e4cb34;
-            font-family:           Jazz LET, fantasy;
-            font-size:             33px;
-            text-transform:        capitalize;
-            text-decoration:       underline;
-            text-decoration-color: red;
-        }
-    }
+.wrapper > * {
+  padding: 20px;
 }
 
-.kcFooter {
-    background:  #88181b;
-    position:    fixed;
-    bottom:      0;
-    left:        0;
-    width:       100%;
-    height:      60px;
-    line-height: 60px;
-    p {
-        color:          white;
-        text-align:     center;
-        vertical-align: center;
-    }
+
+/* HEADER
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.page-header {
+  background: var(--main-white-color);
+}
+.page-header nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
-@media screen and (min-width: 20em) {
+.page-header ul {
+  display: flex;
+  order: 1;
+  width: 100%;
+  margin-top: 15px;
+}
 
-    .kcHeader {
-        .title {
-            display: none;
-        }
-    }
+.page-header ul li:not(:last-child) {
+  padding-right: 15px;
+}
 
-    @media screen and (min-width: 40em) and (max-width: 70em) {
-        .kcHeader {
+.page-header .cta-contact {
+  font-family: inherit;
+  font-size: 1.2rem;
+  padding: 5px 18px;
+  border: 1px solid;
+  border-radius: 5px;
+}
 
-            .title {
-                display:        block;
-                color:          #ffffff;
-                font-family:    Jazz LET, fantasy;
-                font-size:      33px;
-                text-transform: capitalize;
-                margin-left:    33%;
-                margin-top:     -8%;
-            }
-        }
-    }
 
-    .kcContainer {
-        background: aliceblue;
-    }
+/* MAIN
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.page-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  min-height: 350px;
+  background: var(--main-background-color)
+     url(../assets/background.jpg) no-repeat
+    center / cover;
+  background-blend-mode: luminosity;
+  color: var(--main-white-color);
+}
 
-    @media screen and (min-width: 70em) {
+.page-main div {
+  max-width: 500px;
+}
 
-        .kcHeader {
-            .title {
-                display: none;
-            }
+.page-main h1 {
+  margin-bottom: 20px;
+}
 
-            .menu {
-                text-transform:  uppercase;
-                float:           right;
-                font-family:     Courier New, monospace;
-                font-size:       1.5em;
-                letter-spacing:  1px;
-                font-weight:     100;
-                list-style-type: none;
-                margin-top:      1.5em;
-                margin-right:    1em;
+.page-main p + p {
+  margin-top: 10px;
+}
 
-                .mobileMenu i {
-                    display: none;
-                }
 
-                li {
-                    display: inline-flex;
-                    color:   #ffffff;
-                }
+/* FOOTER
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.page-footer {
+  display: flex;
+  flex-direction: column-reverse;
+  background: var(--main-white-color);
+}
 
-                li:hover {
-                    text-decoration: underline;
-                    cursor:          pointer;
-                }
+.page-footer ul {
+  display: flex;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
 
-            }
-        }
-    }
+.page-footer ul li:not(:last-child) {
+  margin-right: 20px;
+}
 
+
+/* MQ
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media screen and (min-width: 550px) {
+  .page-header ul {
+    width: auto;
+    margin-top: 0;
+  }
+
+  .page-header .cta-contact {
+    order: 1;
+  }
+
+  .page-footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .page-footer ul {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+
+  .page-main {
+    padding-left: 90px;
+  }
 }
